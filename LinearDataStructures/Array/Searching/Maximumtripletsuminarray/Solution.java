@@ -26,6 +26,7 @@ class Solution {
 		int n = high - low + 1, p_index = findPivot(arr, low, high) % n;
 		swap(arr[high], arr[low + p_index]);
 		int pivot = arr[high];
+		p_index = low;
 		for(int i = low; i < high; i++) {
 			if(arr[i] <= pivot) {
 				swap(arr[i], arr[p_index]);
@@ -37,7 +38,7 @@ class Solution {
 	}
 	static int[] kLargest(int[] arr, int low, int high, int k) {
 		if(low == high) return null;
-		int j = 0, p_index = findPivot(arr, low, high);
+		int j = 0, p_index = findRandomPivot(arr, low, high);
 		int[] triplet = new int[k];
 		if(k == p_index) {
 			for(int i = (arr.length - p_index); i < arr.length; i++)
