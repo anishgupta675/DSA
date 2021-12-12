@@ -7,7 +7,7 @@ import java.math.*;
 import java.text.*;
 import java.security.*;
 
-public class LinkedList {
+public class Solution {
 	Node head;
 
 	static class Node {
